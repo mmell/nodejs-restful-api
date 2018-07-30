@@ -18,7 +18,7 @@ yarn start
 ```
 
 ## Development
-[Postman](https://www.getpostman.com/) helps with interacting with your server in a nice GUI.
+[Postman](https://www.getpostman.com/) helps with interacting with your server in a nice GUI. You can import the [postman_collection](postman_collection.json) to Postman to install these requests.
 
 - POST localhost:3001/api/auth/register
   - body:

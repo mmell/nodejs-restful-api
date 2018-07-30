@@ -1,0 +1,127 @@
+{
+	"info": {
+		"_postman_id": "626914dc-2d7a-4399-ac3a-6d0f0f60f507",
+		"name": "https://github.com/mmell/nodejs-restful-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "mike",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "example@gmail.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "thisisasecretpassword",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3001/api/auth/register",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				},
+				"description": "Create a user in the db"
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "example@gmail.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "thisisasecretpassword",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3001/api/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				},
+				"description": "Get a JWT token"
+			},
+			"response": []
+		},
+		{
+			"name": "User details",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjViNWY0YTNhYWQxYmE5NmIzYTAwNDAzNCIsImlhdCI6MTUzMjk3MTU3OCwiZXhwIjoxNTMzMDU3OTc4fQ.oZXGwRDT_oNvMta9lZtLc3rXgCTDfbPXyMY7b850uc0"
+					}
+				],
+				"url": {
+					"raw": "localhost:3001/api/auth/me",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"auth",
+						"me"
+					]
+				},
+				"description": "User details protected by JWT token"
+			},
+			"response": []
+		}
+	]
+}
