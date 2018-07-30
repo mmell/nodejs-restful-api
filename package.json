@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "start": "PORT=3001 nodemon server.js",
-    "start:db": "./mongo_docker.sh",
+    "db:start": "./mongo_docker.sh",
+    "db:stop": "docker stop jwt_demo_mongo",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
