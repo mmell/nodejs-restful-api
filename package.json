@@ -4,14 +4,20 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "PORT=3001 nodemon server.js",
+    "start:db": "./mongo_docker.sh",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
+    "jsonwebtoken": "^8.3.0",
     "mongoose": "^5.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.3"
   }
 }
